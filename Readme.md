@@ -42,14 +42,88 @@ Summary
 -	OpenAPI data modeled Transaction for core system functionality aka listing transaction page totals by month(Solution-TransactionPaginationRest.docx), implemented by “bank-data-admin-client” project containing REST APIs
 -	EUR  as  a common base currency  (Solution-TransactionPaginationRest.docx) for debit/credit total amount computation
 -	Spring Security component powered JWT web token (SpringSecurityRestAPI.docx) identity governance, implemented by “jwt-OAuth-OpenAPI” project, with authentication/authorization security on Rest API.  Extra security features include,
-•	“bank-account-data-encrypt” to supplement proprietary encryption method for sensitive information 
-•	“access-sec-app” (/account-security-python-client/access-sec-app.py) designed to facilitate cross domain identity security and developed from Swagger generated client code (/OpenAPI-generated-docs /bank-access-api.json)
+  * “bank-account-data-encrypt” to supplement proprietary encryption method for sensitive information 
+  * “access-sec-app” (/account-security-python-client/access-sec-app.py) designed to facilitate cross domain identity security and developed from Swagger generated client code (/OpenAPI-generated-docs /bank-access-api.json)
 -	Mongo NoSQL database (/data-lake/NoSql-mongo) enabling JSON serializable/de-serializable data operations on Transaction-User-Account data schema (OpenAPI-generated-docs /bank-Transaction/index.html ). Extra data streaming stability features include, 
-•	MariaDB console as DB Admin client(Appendix)
-•	MaxScale as NoSql clustering solution  (Appendix)
+  * MariaDB console as DB Admin client(Appendix)
+  * MaxScale as NoSql clustering solution  (Appendix)
 -	Global Exchange (“global-exchange” project) connected to 3rd Party – Free Currency API 
 -	Kafka Spring (“Kafka-Spring” project) and MongoDB Connector Components ((/data-lake/NoSql-mongo)) 
 -	Kubernetes Orchestration Scheme (/kube-deploy)
 -	Bank Data Admin transaction DB logs fetching (Appendix)
 -	DevOps CirclCI compatible pipeline Dev-Test-Deploy scripts (/cicd) and successfully run (Appendix)
+Major Tech Stacks
+-	Spring Microservices 
+-	Node.js with Axios Asynchronous external API calls for Global Exchange
+-	Python Restful API with built in mocking, batch inserting, easy fetching data capabilities
+-	MongoDB and MariaDB, NoSql clustering and embedded database, Maria MaxScale Enterprise
+-	RabbitMQ Kafka message queue exchange for topic data consumption 
+-	Docker as containerization tool
+
+Architecture Diagram
+
+Appendix
+
+MariaDB console as DB Admin client
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+NoSql clustering
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+Bank Data Admin transaction DB logs
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CirclCI Pipeline Run Successfully
+
+
 
